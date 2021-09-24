@@ -1,0 +1,10 @@
+beschrijf functionaliteiten
+
+winkel dat Games of movies uithuurt.
+
+houdt producten bij (titel,id, movie of game)
+
+a)voeg product toe (geef parameters)
+b)toon product (geef id)
+c)toon prijs (geef id en dagen dat je het bijhoudt)
+
