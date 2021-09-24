@@ -1,8 +1,0 @@
-Ik heb abstracte klasse product die een constructor heeft.
-hoe geef ik game en movie dan allebij een constructor zonder dubbele code te schrijven.
-
-ik kon shop ook een map geven aan producten zodat een id en een product gelinkt worden?
-maar we kunnen de id ook gebruiken als index in de arraylist?
-
-zouden we de main methode en de ui ook moeten splitsen?
-
