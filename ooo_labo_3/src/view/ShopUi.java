@@ -35,20 +35,20 @@ public class ShopUi {
         String title = JOptionPane.showInputDialog("Enter the title:");
         String type = JOptionPane.showInputDialog("Enter the type (M for movie/G for game/C for cd):");
         try {
-            if(type.equals("M")) {
-                shop.addProduct(new Movie(title));
-            }
-
-            if(type.equals("G")) {
-                shop.addProduct(new Game(title));
-            }
-
-            if(type.equals("C")) {
-                shop.addProduct(new Cd(title));
-            }
-
-            else {
-                JOptionPane.showMessageDialog(null, "Type is invalid");
+            switch (type) {
+                case "M":
+                    shop.addProduct(new Movie(title));
+                    break;
+                case "G":
+                    shop.addProduct(new Game(title));
+                    break;
+                case "C":
+                    shop.addProduct(new Cd(title));
+                    break;
+                default:
+                    System.out.println(type);
+                    JOptionPane.showMessageDialog(null, "Type is invalid");
+                    break;
             }
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, e.getMessage());
