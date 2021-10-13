@@ -7,6 +7,8 @@ public abstract class Product implements Comparable, Serializable {
     private String title;
     private PriceStrategy priceStrategy;
     private boolean beschikbaar = true;
+    private ProductState uitgeleendState;
+    private ProductState productState;
 
     public Product(String title) {
         setTitle(title);
@@ -77,5 +79,9 @@ public abstract class Product implements Comparable, Serializable {
 
     public boolean isBeschikbaar() {
         return beschikbaar;
+    }
+
+    public double getStatePrice(int days) {
+        return productState.getStatePrice(days);
     }
 }
