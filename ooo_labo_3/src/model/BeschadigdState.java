@@ -6,5 +6,4 @@ public class BeschadigdState extends ProductState{
         this.product.verwijder();
     }
 
-
 }

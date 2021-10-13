@@ -15,6 +15,4 @@ public abstract class ProductState {
     public void herstelProduct(){
         throw new IllegalArgumentException();
     }
-
-    public abstract double getStatePrice(int days);
 }
