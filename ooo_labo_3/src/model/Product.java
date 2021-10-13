@@ -7,11 +7,16 @@ public abstract class Product implements Comparable, Serializable {
     private String title;
     private PriceStrategy priceStrategy;
     private boolean beschikbaar = true;
-    private ProductState uitgeleendState;
-    private ProductState productState;
+    private ProductState state;
+    ProductState uitgeleendState;
+    ProductState uitleenbaarState;
+    ProductState verwijderdState;
 
     public Product(String title) {
         setTitle(title);
+        uitleenbaarState = new UitleenbaarState();
+        uitgeleendState = new UitgeleendState();
+        verwijderdState = new VerwijderdState();
     }
 
     public String getId() {
@@ -71,6 +76,7 @@ public abstract class Product implements Comparable, Serializable {
             throw new IllegalArgumentException("Je kan het product niet uitlenen");
         }
         this.beschikbaar = false;
+        this.setState(uitgeleendState);
     }
 
     public void verwijder(){
@@ -81,7 +87,7 @@ public abstract class Product implements Comparable, Serializable {
         return beschikbaar;
     }
 
-    public double getStatePrice(int days) {
-        return productState.getStatePrice(days);
+    public void setState(ProductState state) {
+        this.state = state;
     }
 }

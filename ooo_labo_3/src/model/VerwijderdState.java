@@ -1,4 +1,4 @@
 package model;
 
-public class VerwijderdState {
+public class VerwijderdState extends ProductState {
 }

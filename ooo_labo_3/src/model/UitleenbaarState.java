@@ -10,6 +10,4 @@ public class UitleenbaarState extends ProductState{
     public void verwijderProduct(){
         this.product.verwijder();
     }
-
-
 }
