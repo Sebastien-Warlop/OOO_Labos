@@ -1,7 +1,7 @@
 package model;
 
 public abstract class ProductState {
-    private Product product;
+    protected Product product;
 
     public void verwijderProduct(){
         throw new IllegalArgumentException();

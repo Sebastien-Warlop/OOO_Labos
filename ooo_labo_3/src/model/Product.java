@@ -71,6 +71,10 @@ public abstract class Product implements Comparable, Serializable {
         this.beschikbaar = false;
     }
 
+    public void verwijder(){
+        throw new IllegalArgumentException();
+    }
+
     public boolean isBeschikbaar() {
         return beschikbaar;
     }

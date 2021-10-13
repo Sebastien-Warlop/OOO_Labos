@@ -1,4 +1,8 @@
 package model;
 
-public class BeschadigdState {
+public class BeschadigdState extends ProductState{
+    @Override
+    public void verwijderProduct(){
+        this.
+    }
 }
