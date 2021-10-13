@@ -6,8 +6,10 @@ public abstract class Product implements Comparable, Serializable {
     private String id;
     private String title;
     private PriceStrategy priceStrategy;
+    private boolean beschadigd;
     private boolean beschikbaar = true;
     private ProductState state;
+    ProductState beschadigdState;
     ProductState uitgeleendState;
     ProductState uitleenbaarState;
     ProductState verwijderdState;
@@ -71,6 +73,18 @@ public abstract class Product implements Comparable, Serializable {
         return this.id.compareTo(product.id);
     }
 
+    public ProductState getUitleenbaarState() {
+        return uitleenbaarState;
+    }
+
+    public boolean isBeschadigd() {
+        return beschadigd;
+    }
+
+    public ProductState getBeschadigdState() {
+        return beschadigdState;
+    }
+
     public void leenUit() {
         if(!isBeschikbaar()) {
             throw new IllegalArgumentException("Je kan het product niet uitlenen");
@@ -85,6 +99,10 @@ public abstract class Product implements Comparable, Serializable {
 
     public boolean isBeschikbaar() {
         return beschikbaar;
+    }
+
+    public void terugbrengen() {
+        UitgeleendState.brengTerugProduct();
     }
 
     public void setState(ProductState state) {

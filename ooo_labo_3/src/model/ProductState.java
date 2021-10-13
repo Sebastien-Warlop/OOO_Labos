@@ -7,12 +7,14 @@ public abstract class ProductState {
         throw new IllegalArgumentException();
     }
     public void uitleenProduct(){
-        throw new IllegalArgumentException();
+        throw new IllegalArgumentException("Product is al uitgeleend");
     }
-    public void brengTerugProduct(){
-        throw new IllegalArgumentException();
+    public static void brengTerugProduct(){
+        ProductState.brengTerugProduct();
     }
     public void herstelProduct(){
         throw new IllegalArgumentException();
     }
+
+    public abstract void terugbrengen();
 }
