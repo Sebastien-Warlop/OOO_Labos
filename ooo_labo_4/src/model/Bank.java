@@ -1,6 +1,9 @@
 package model;
 
+import java.util.HashMap;
+
 public class Bank implements Subject {
+    private Map<RekeningNummer,Rekening> rekeningen;
 
 
     @Override
